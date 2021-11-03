@@ -55,7 +55,7 @@
       */
 
       const changeTitle = function (newTitle) {
-        let getTile = document.getElementsByTagName("h1")["0"];
+        let getTile = document.getElementsByTagName("h1")[0];
         getTile.innerHTML = newTitle;
       };
       changeTitle("new title of the page ");
@@ -65,7 +65,7 @@
       */
 
       const addClassToTitle = function () {
-        let changeClassTitle = document.getElementsByTagName("h1")["0"];
+        let changeClassTitle = document.getElementsByTagName("h1")[0];
         changeClassTitle.classList = "myHeading";
       };
       addClassToTitle();
@@ -88,7 +88,7 @@
       */
 
       const changeUrls = function () {
-        let linkoftag = document.getElementsByTagName("a")["0"];
+        let linkoftag = document.getElementsByTagName("a")[0];
         linkoftag.setAttribute("href", "https://www.google.com");
       };
 
@@ -143,15 +143,16 @@
        Make the heading of the page change color every time the user clicks on it.
       */
 
-      // const makeItClickable = function () {
-      //   let heading = document.getElementsByTagName("h1")["0"];
-      //   heading.addEventListener("click", function (e) {
-      //     let blueColor = Math.random() * 256;
-      //     heading.style.color = `RGB ${blueColor}`;
-      //     e.target.
-      //   });
-      // };
-      // makeItClickable();
+      const makeItClickable = function () {
+        let heading = document.getElementsByTagName("h1")[0];
+        heading.addEventListener("click", function (e) {
+          let blueColor = Math.floor(Math.random() * 255);
+          heading.style.color = `RGB ${blueColor}`;
+          // three color red blure, green
+          // rgb(redcolor,greenclolor,blurecolor)
+        });
+      };
+      makeItClickable();
 
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
